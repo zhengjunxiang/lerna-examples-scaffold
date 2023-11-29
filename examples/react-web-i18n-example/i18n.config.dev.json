@@ -1,0 +1,20 @@
+{
+  "dest": "src/assets/dev/locales",
+  "env": "dev",
+  "namespaces": [
+    {
+      "projectId": 91,
+      "apiKey": "2d6962c3385144a1b72332ec2646b7d5",
+      "namespaceId": "xccwknm5h1",
+      "name": "waimai_home",
+      "locale": "zh"
+    },
+    {
+      "projectId": 91,
+      "apiKey": "2d6962c3385144a1b72332ec2646b7d5",
+      "namespaceId": "w2exgtcgaz",
+      "name": "waimai_home_f",
+      "locale": "zh"
+    }
+  ]
+}

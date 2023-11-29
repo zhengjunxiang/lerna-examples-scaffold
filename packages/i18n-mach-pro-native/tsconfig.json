@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "removeComments": false,
+        "importHelpers": true,
+        "declarationDir": "lib",
+        "declaration": true,
+        "rootDir": "src",
+        "outDir": "lib",
+        "module": "esnext",
+        "target": "esnext",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "moduleResolution": "Node",
+    },
+    "include": [
+        "src"
+    ]
+}

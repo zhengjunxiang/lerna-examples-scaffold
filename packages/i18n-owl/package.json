@@ -1,0 +1,31 @@
+{
+  "name": "@sailor/i18n-owl",
+  "version": "0.2.1",
+  "description": "raptor埋单插件",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://r.npm.sankuai.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.sankuai.com/sailor/sailor_i18n_sdk_web.git"
+  },
+  "scripts": {
+    "clean": "rimraf types lib *.tsbuildinfo",
+    "build": "tsc -b",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@sailor/i18n-shared": "0.2.1",
+    "i18next": "^21.8.16"
+  }
+}

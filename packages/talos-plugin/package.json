@@ -1,0 +1,23 @@
+{
+  "name": "@sailor/i18n-talos-plugin",
+  "version": "0.2.1",
+  "module": "lib/index.js",
+  "private": true,
+  "scripts": {
+    "build": "tsc -b",
+    "watch": "tsc -w",
+    "pub": "tsc -b && node pub.js"
+  },
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
+    "mime-types": "^2.1.35",
+    "mos-mss": "^1.1.10",
+    "path": "^0.12.7"
+  }
+}

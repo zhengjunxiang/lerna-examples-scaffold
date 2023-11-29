@@ -1,0 +1,1 @@
+export * as MachProI18N from './native-modules';

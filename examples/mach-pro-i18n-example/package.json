@@ -1,0 +1,40 @@
+{
+    "name": "mach-pro-i18n-example",
+    "version": "0.2.1",
+    "private": true,
+    "scripts": {
+        "dev:index": "mach-pro dev --type react --page demo",
+        "dev:intl": "mach-pro dev --type react --page intl",
+        "dev:wechat": "mach-pro dev --type wechat",
+        "build:wechat": "mach-pro build --type wechat",
+        "upload": "mach-pro upload",
+        "sync": "i18n sync",
+        "sync:index": "i18n sync --page demo",
+        "clean": "rimraf public dist"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.10",
+        "@wmfe/mach-pro": "3.3.30-next.5",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "rimraf": "^3.0.2"
+    },
+    "dependencies": {
+        "@mtfe/portm-sdk": "^1.2.8",
+        "@ocean/ocean-i18ncomponent": "^1.0.19",
+        "@sailor/i18n-mach-pro": "0.2.1",
+        "@sailor/i18n-resource-sync": "0.2.1",
+        "@wmfe/babel-plugin-iconfont-resolve": "^1.0.4",
+        "@wmfe/eslint-config-mt": "^0.5.9",
+        "@wmfe/mach-pro-components-react": "3.3.30-next.5",
+        "@wmfe/mach-pro-knb": "3.3.30-next.5",
+        "@wmfe/mach-pro-store": "3.3.30-next.5",
+        "@wmfe/mach-pro-worker": "3.3.30-next.5",
+        "@wmfe/machpro-utils": "^0.0.7",
+        "eslint-config-airbnb": "^18.2.1",
+        "intl-messageformat": "^10.1.4",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^4.5.4"
+    }
+}

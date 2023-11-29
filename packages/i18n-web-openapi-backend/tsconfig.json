@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "removeComments": true,
+    "importHelpers": true,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "Node"
+  },
+  "include": ["src"]
+}

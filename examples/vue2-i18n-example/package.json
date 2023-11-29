@@ -1,0 +1,26 @@
+{
+  "name": "vue2-i18n-example",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "sync": "i18n sync",
+    "sync:dev": "i18n sync -c i18n.config.dev.json"
+  },
+  "dependencies": {
+    "@dp/owl-i18n": "^1.1.2",
+    "@sailor/i18n-vue": "0.1.9",
+    "@sailor/i18n-web": "0.1.9",
+    "@sailor/i18n-web-openapi-backend": "0.1.9",
+    "i18next-chained-backend": "^2.1.0",
+    "i18next-resources-to-backend": "^1.1.0",
+    "vue": "^2.7.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^2.0.0",
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "terser": "^5.14.2",
+    "vite": "^3.0.2"
+  }
+}

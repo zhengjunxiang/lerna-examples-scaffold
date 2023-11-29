@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ES2017",
+        "rootDir": "src",
+        "outDir": "lib",
+        "noImplicitAny": false,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "noUnusedLocals": true,
+        "module": "commonjs",
+        "declaration": false,
+        "rootDirs": ["src"],
+        "jsx": "preserve",
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "allowJs": true
+    },
+    "include": [
+        "src"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@sailor/i18n-shared",
+  "version": "0.2.1",
+  "module": "lib/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf types lib *.tsbuildinfo",
+    "build": "tsc -b",
+    "watch": "tsc -w",
+    "lint": "eslint --ext js,jsx,ts,tsx src",
+    "lint:fix": "eslint --ext js,jsx,ts,tsx src --fix"
+  }
+}

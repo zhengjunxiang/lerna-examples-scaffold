@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "skipLibCheck": true,
+      "declaration": true,
+      "declarationMap": false,
+      "noImplicitAny": true,
+      "noEmitOnError": false,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "strictNullChecks": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "downlevelIteration": true,
+      "resolveJsonModule": true,
+      "removeComments": true,
+      "moduleResolution": "node",
+      "target": "esnext",
+      "jsx": "preserve",
+      "sourceMap": false,
+      "composite": true,
+      "types": [
+        "@wmfe/mach-pro-types",
+        "@types/node"
+      ]
+    }
+  }

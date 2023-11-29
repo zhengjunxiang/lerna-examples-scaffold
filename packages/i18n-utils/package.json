@@ -1,0 +1,21 @@
+{
+  "name": "@sailor/i18n-utils",
+  "version": "0.2.1",
+  "module": "lib/index.js",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf types lib *.tsbuildinfo",
+    "build": "tsc -b",
+    "watch": "tsc -w",
+    "lint": "eslint --ext js,jsx,ts,tsx src",
+    "lint:fix": "eslint --ext js,jsx,ts,tsx src --fix"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "tslint": "^6.1.3"
+  }
+}

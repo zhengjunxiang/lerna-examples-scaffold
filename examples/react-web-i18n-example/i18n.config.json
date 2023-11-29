@@ -1,0 +1,12 @@
+{
+  "dest": "src/assets/locales",
+  "env": "test",
+  "namespaces": [
+    {
+      "projectId": 1,
+      "apiKey": "0db71be98c9b460f9cbb4f8fa945463f",
+      "namespaceId": "qy9xq1l70k",
+      "name": "waimai_home"
+    }
+  ]
+}

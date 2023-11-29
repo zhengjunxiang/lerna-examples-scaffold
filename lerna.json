@@ -1,0 +1,35 @@
+{
+  "lerna": "4.0.0",
+  "version": "0.2.1",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "command": {
+    "run": {
+      "stream": true
+    },
+    "publish": {
+      "forcePublish": true,
+      "skipGit": true,
+      "registry": "http://r.npm.sankuai.com",
+      "ignoreChanges": "",
+      "message": "chore(release): publish %s"
+    },
+    "version": {
+      "message": "chore(version): change version %s"
+    }
+  },
+  "packages": [
+    "packages/i18n-language-detector",
+    "packages/i18n-mach-pro-intl-polyfill",
+    "packages/i18n-mach-pro-native",
+    "packages/i18n-extends",
+    "packages/i18n-web-openapi-backend",
+    "packages/i18n-resource-sync",
+    "packages/i18n-web",
+    "packages/i18n-mach-pro",
+    "packages/i18n-vue",
+    "i18n-script",
+    "i18n-utils",
+    "i18n-shared"
+  ]
+}

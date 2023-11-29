@@ -1,0 +1,69 @@
+{
+  "private": true,
+  "engines": {
+    "yarn": ">=1.2.1"
+  },
+  "scripts": {
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
+    "clean": "lerna run clean",
+    "watch": "lerna run --parallel watch",
+    "bootstrap": "lerna bootstrap --npm-client=yarn --registry=http://r.npm.sankuai.com",
+    "build": "yarn run clean && lerna run build",
+    "publish:next": "yarn && mnpm run publish-next && yarn publish:check",
+    "publish:test": "yarn && mnpm run publish-test && yarn publish:check",
+    "publish-latest": "lerna publish --exact",
+    "publish-next": "lerna publish --exact --canary=next --npm-tag=next --yes",
+    "publish-test": "lerna publish --exact --canary=test --npm-tag=test --yes",
+    "publish:check": "node scripts/check-publish.js"
+  },
+  "lint-staged": {
+    "*.ts?(x)": [
+      "eslint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@types/node": "^18.11.10",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.27.0",
+    "eslint-plugin-deprecation": "^1.2.1",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-no-unsanitized": "^3.1.5",
+    "eslint-plugin-react": "^7.23.2",
+    "git-cz": "^4.8.0",
+    "glob": "^7.1.6",
+    "husky": "^4.2.5",
+    "lerna": "^4.0.0",
+    "lint-staged": "^10.2.11",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.34.2",
+    "rollup-plugin-progress": "^1.1.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslint": "^6.1.3",
+    "typescript": "^4.8.4"
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/react-web-i18n-example",
+    "examples/mach-pro-i18n-example"
+  ],
+  "version": "0.1.0"
+}

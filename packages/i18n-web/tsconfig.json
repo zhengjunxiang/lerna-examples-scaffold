@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib/esm",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "Node"
+  },
+  "include": ["src"]
+}
