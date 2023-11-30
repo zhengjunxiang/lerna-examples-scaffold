@@ -13,10 +13,9 @@ yarn;
 ## 运行 demo
 
 ```js
-cd examples/mach-pro-i18n-example
-yarn dev:index
+cd examples/react-web-l10n-example
+yarn dev
 ```
-
 
 ## 本地调试
 

@@ -19,7 +19,6 @@
       "sourceMap": false,
       "composite": true,
       "types": [
-        "@wmfe/mach-pro-types",
         "@types/node"
       ]
     }
