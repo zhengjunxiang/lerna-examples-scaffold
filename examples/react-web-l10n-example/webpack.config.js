@@ -29,9 +29,6 @@ module.exports = {
     filename: 'js/[name].bundle.js',
   },
   devtool: 'source-map',
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
-  },
   module: {
     rules: [
       {
@@ -46,9 +43,6 @@ module.exports = {
     ],
   },
   resolve: {
-    fallback: {
-      stream: require.resolve('stream-browserify'),
-    },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.vue'],
   },
   optimization: {

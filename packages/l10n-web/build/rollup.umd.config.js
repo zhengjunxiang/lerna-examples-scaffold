@@ -1,7 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import babel from '@rollup/plugin-babel';
+import { babel } from '@rollup/plugin-babel';
 import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 
@@ -25,6 +25,12 @@ export default {
     },
   ],
   plugins: [
+    nodeResolve({
+      extensions,
+      preferBuiltins: true,
+      mainFields: ['browser']
+    }),
+    commonjs(),
     typescript({
       compilerOptions: {
         outDir: 'lib/umd',
@@ -35,21 +41,22 @@ export default {
         target: 'es5',
       },
     }),
-    commonjs(),
-    nodeResolve({
-      extensions,
-    }),
     replace({
       values: {
         'process.env.BUILD_TYPE': JSON.stringify('web'),
       },
       preventAssignment: true,
     }),
+    // babel({
+    //   extensions: isProd
+    //     ? ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', '.tsx']
+    //     : ['.js', '.jsx', '.es6', '.es', '.mjs'],
+    //   babelHelpers: 'bundled',
+    // }),
     babel({
-      extensions: isProd
-        ? ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', '.tsx']
-        : ['.js', '.jsx', '.es6', '.es', '.mjs'],
-      babelHelpers: 'bundled',
+      exclude: "**/node_modules/**",
+      babelHelpers: "runtime",
+      extensions: ['.js', '.ts'],
     }),
     replace({
       values: {

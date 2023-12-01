@@ -19,6 +19,7 @@
     }
   },
   "packages": [
-    "packages/l10n-web"
+    "packages/l10n-web",
+    "examples/react-web-l10n-example"
   ]
 }

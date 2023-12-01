@@ -1,8 +1,9 @@
 import typescript from '@rollup/plugin-typescript';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import babel from '@rollup/plugin-babel';
+import {babel} from "@rollup/plugin-babel";
 import replace from '@rollup/plugin-replace';
+import json from '@rollup/plugin-json';
 // import { terser } from 'rollup-plugin-terser';
 
 /**
@@ -26,6 +27,12 @@ export default {
   ],
   // external,
   plugins: [
+    nodeResolve({
+      extensions,
+      preferBuiltins: true,
+      mainFields: ['browser']
+    }),
+    commonjs(),
     typescript({
       compilerOptions: {
         outDir: 'lib/esm',
@@ -36,15 +43,11 @@ export default {
         target: 'es5',
       },
     }),
-    commonjs(),
-    nodeResolve({
-      extensions,
-    }),
     babel({
-      extensions: isProd
-        ? ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', '.tsx']
-        : ['.js', '.jsx', '.es6', '.es', '.mjs'],
-      babelHelpers: 'bundled',
+      exclude: "**/node_modules/**",
+      babelHelpers: "runtime",
+      // skipPreflightCheck: true,
+      extensions: ['.js', '.ts'],
     }),
     replace({
       values: {
@@ -52,6 +55,7 @@ export default {
       },
       preventAssignment: true,
     }),
+    json(),
     // process.env.NODE_ENV === 'production' &&
     //   terser({ format: { comments: false } }),
   ],
