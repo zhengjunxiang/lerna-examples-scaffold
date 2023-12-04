@@ -10,8 +10,9 @@ l10nClient.init({
   systemTimeZone: 'GMT+08:00',
   appToken: 517,
   isDev: true
-}, (result: any, error: any) => {
+}, (result, errorInfo) => {
   console.log('result', result);
+  console.log('errorInfo', errorInfo);
   const root = createRoot(document.getElementById('app') as Element);
   root.render(<App />);
 });
