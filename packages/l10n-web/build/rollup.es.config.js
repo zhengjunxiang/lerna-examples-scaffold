@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import {babel} from "@rollup/plugin-babel";
 import replace from '@rollup/plugin-replace';
 import json from '@rollup/plugin-json';
-// import { terser } from 'rollup-plugin-terser';
+import { terser } from 'rollup-plugin-terser';
 
 /**
  * 通过 process.env.BUILD_TYPE 区分构建属于 web 还是 mach-pro
@@ -13,7 +13,7 @@ import json from '@rollup/plugin-json';
  */
 const isProd = process.env.NODE_ENV === 'production';
 const extensions = ['.js', '.ts', '.tsx'];
-// const external = ['i18next', 'i18next-icu', 'react-i18next'];
+const external = ['axios'];
 export default {
   treeshake: {
     moduleSideEffects: false,
@@ -25,7 +25,7 @@ export default {
       format: 'esm',
     },
   ],
-  // external,
+  external,
   plugins: [
     nodeResolve({
       extensions,
@@ -56,8 +56,7 @@ export default {
       preventAssignment: true,
     }),
     json(),
-    // process.env.NODE_ENV === 'production' &&
-    //   terser({ format: { comments: false } }),
+    isProd && terser({ format: { comments: false } }),
   ],
   onwarn(warning, warn) {
     const skipWarningCode = ['THIS_IS_UNDEFINED'];

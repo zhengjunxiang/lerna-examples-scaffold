@@ -1964,6 +1964,13 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
+"@mtfe/horn-sdk@^0.1.6":
+  version "0.1.6"
+  resolved "http://r.npm.sankuai.com/@mtfe/horn-sdk/download/@mtfe/horn-sdk-0.1.6.tgz#4e7db5ee24f74b792f939804b19ca0a437efcd3e"
+  integrity sha1-Tn217iT3S3kvk5gEsZygpDfvzT4=
+  dependencies:
+    tslib "^1.14.1"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "http://r.npm.sankuai.com/@nodelib/fs.scandir/download/@nodelib/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -2366,16 +2373,16 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "20.10.1"
-  resolved "http://r.npm.sankuai.com/@types/node/download/@types/node-20.10.1.tgz#d2c96f356c3125fedc983d74c424910c3767141c"
-  integrity sha1-0slvNWwxJf7cmD10xCSRDDdnFBw=
+  version "20.10.2"
+  resolved "http://r.npm.sankuai.com/@types/node/download/@types/node-20.10.2.tgz#32a5e8228357f57714ad28d52229ab04880c2814"
+  integrity sha1-MqXoIoNX9XcUrSjVIimrBIgMKBQ=
   dependencies:
     undici-types "~5.26.4"
 
 "@types/node@^18.11.10", "@types/node@^18.11.9":
-  version "18.19.0"
-  resolved "http://r.npm.sankuai.com/@types/node/download/@types/node-18.19.0.tgz#e86ce256c46661016fa83360bf8738eb4efdc88c"
-  integrity sha1-6GziVsRmYQFvqDNgv4c46079yIw=
+  version "18.19.1"
+  resolved "http://r.npm.sankuai.com/@types/node/download/@types/node-18.19.1.tgz#e3ed7d5ab5ea21f33a4503decb2171e0d8f53070"
+  integrity sha1-4+19WrXqIfM6RQPeyyFx4Nj1MHA=
   dependencies:
     undici-types "~5.26.4"
 
@@ -3121,13 +3128,12 @@ aws4@^1.8.0:
   resolved "http://r.npm.sankuai.com/aws4/download/aws4-1.12.0.tgz#ce1c9d143389679e253b314241ea9aa5cec980d3"
   integrity sha1-zhydFDOJZ54lOzFCQeqapc7JgNM=
 
-axios@0.19.0:
-  version "0.19.0"
-  resolved "http://r.npm.sankuai.com/axios/download/axios-0.19.0.tgz#8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8"
-  integrity sha1-jgm/89kSLhM/e4EByPvdAO09Krg=
+axios@^0.19.0:
+  version "0.19.2"
+  resolved "http://r.npm.sankuai.com/axios/download/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+  integrity sha1-PqNsXYgY0NX4qKl6bTa4bNwAyyc=
   dependencies:
     follow-redirects "1.5.10"
-    is-buffer "^2.0.2"
 
 babel-plugin-polyfill-corejs2@^0.4.6:
   version "0.4.6"
@@ -5802,11 +5808,6 @@ is-boolean-object@^1.1.0:
   dependencies:
     call-bind "^1.0.2"
     has-tostringtag "^1.0.0"
-
-is-buffer@^2.0.2:
-  version "2.0.5"
-  resolved "http://r.npm.sankuai.com/is-buffer/download/is-buffer-2.0.5.tgz#ebc252e400d22ff8d77fa09888821a24a658c191"
-  integrity sha1-68JS5ADSL/jXf6CYiIIaJKZYwZE=
 
 is-callable@^1.1.3, is-callable@^1.1.4, is-callable@^1.2.7:
   version "1.2.7"
@@ -9146,7 +9147,7 @@ tsconfig-paths@^3.14.2:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@^1.13.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.13.0, tslib@^1.14.1, tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
   resolved "http://r.npm.sankuai.com/tslib/download/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=

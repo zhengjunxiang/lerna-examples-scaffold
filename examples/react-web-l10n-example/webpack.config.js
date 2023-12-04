@@ -4,20 +4,20 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const BUILD_ENV = process.env.BUILD_ENV;
 let proxtConfig = {
   // 默认本地mock走yapi
-  '/api/openapi': {
-    target: 'https://i18n.mykeeta.com',
-    changeOrigin: true,
-  },
+  // '/api/openapi': {
+  //   target: 'https://i18n.mykeeta.com',
+  //   changeOrigin: true,
+  // },
 };
 
 if (BUILD_ENV === 'dev') {
-  proxtConfig = {
-    // 默认本地mock走yapi
-    '/api/openapi': {
-      target: 'http://ocean.waimai.test.sankuai.com',
-      changeOrigin: true,
-    },
-  };
+  // proxtConfig = {
+  //   // 默认本地mock走yapi
+  //   '/api/openapi': {
+  //     target: 'http://ocean.waimai.test.sankuai.com',
+  //     changeOrigin: true,
+  //   },
+  // };
 }
 module.exports = {
   entry: {
