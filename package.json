@@ -8,7 +8,7 @@
     "lint:fix": "lerna run lint:fix",
     "clean": "lerna run clean",
     "watch": "lerna run --parallel watch",
-    "bootstrap": "lerna bootstrap --npm-client=yarn --registry=http://r.npm.sankuai.com",
+    "bootstrap": "lerna bootstrap --npm-client=yarn",
     "build": "yarn run clean && lerna run build",
     "publish:next": "yarn && mnpm run publish-next && yarn publish:check",
     "publish:test": "yarn && mnpm run publish-test && yarn publish:check",

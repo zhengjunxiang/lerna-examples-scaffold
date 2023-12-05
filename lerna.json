@@ -10,7 +10,6 @@
     "publish": {
       "forcePublish": true,
       "skipGit": true,
-      "registry": "http://r.npm.sankuai.com",
       "ignoreChanges": "",
       "message": "chore(release): publish %s"
     },

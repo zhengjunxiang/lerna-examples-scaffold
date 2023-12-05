@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { l10nClient } from '@sailor/l10n-web';
+import { l10nClient } from '@xxx/l10n-web';
 import App from './App';
 
 l10nClient.init({

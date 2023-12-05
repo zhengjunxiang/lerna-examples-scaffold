@@ -1,2 +1,2 @@
 npx lerna version patch --exact --no-push --yes
-npx lerna publish from-git --dist-tag=latest --registry http://r.npm.sankuai.com/ --yes
+npx lerna publish from-git --dist-tag=latest --yes

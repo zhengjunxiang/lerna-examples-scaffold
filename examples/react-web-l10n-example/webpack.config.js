@@ -5,7 +5,7 @@ const BUILD_ENV = process.env.BUILD_ENV;
 let proxtConfig = {
   // 默认本地mock走yapi
   // '/api/openapi': {
-  //   target: 'https://i18n.mykeeta.com',
+  //   target: 'https://i18n.xxx.com',
   //   changeOrigin: true,
   // },
 };
@@ -14,7 +14,7 @@ if (BUILD_ENV === 'dev') {
   // proxtConfig = {
   //   // 默认本地mock走yapi
   //   '/api/openapi': {
-  //     target: 'http://ocean.waimai.test.sankuai.com',
+  //     target: 'http://xxx.com',
   //     changeOrigin: true,
   //   },
   // };
