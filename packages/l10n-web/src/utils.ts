@@ -20,4 +20,4 @@ function stringify(obj, prefix = '') {
 
 export {
   stringify
-}
+};

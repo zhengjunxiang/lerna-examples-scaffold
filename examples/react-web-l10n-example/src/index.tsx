@@ -11,8 +11,9 @@ l10nClient.init({
   appToken: 517,
   isDev: true
 }, (result, errorInfo) => {
-  console.log('result', result);
-  console.log('errorInfo', errorInfo);
+  if (!result) {
+    console.log('errorInfo?.error', errorInfo?.error);
+  }
   const root = createRoot(document.getElementById('app') as Element);
   root.render(<App />);
 });

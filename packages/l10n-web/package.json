@@ -1,16 +1,16 @@
 {
   "name": "@sailor/l10n-web",
-  "version": "0.2.1",
+  "version": "0.0.1",
   "module": "lib/esm/index.js",
   "main": "lib/esm/index.js",
-  "types": "lib/esm/types/index.d.ts",
+  "types": "lib/esm/types",
   "files": [
     "lib"
   ],
   "scripts": {
     "clean": "rimraf lib *.tsbuildinfo",
     "watch": "NODE_ENV=development rollup -c build/rollup.es.config.js -w",
-    "build": "yarn build:es & yarn build:umd",
+    "build": "yarn build:es",
     "build:es": "NODE_ENV=production rollup -c build/rollup.es.config.js",
     "build:umd": "NODE_ENV=production rollup -c build/rollup.umd.config.js",
     "lint": "eslint --ext js,jsx,ts,tsx src",

@@ -1,25 +1,16 @@
 import axios from 'axios';
 import Horn from '@mtfe/horn-sdk';
 import { stringify } from './utils';
-
-interface IInstance {
-  init: (parmas: {
-    systemRegion: string,
-    systemLocale: string,
-    systemTimeZone: string,
-    appToken: string | number
-    isDev?: boolean
-  }, cb: (result: Record<string, any> | null, errorInfo?: {
-    message: string,
-    error: any
-  }) => void) => void
-};
+import { IInstance } from './interface';
 
 function createInstance(): IInstance {
-  const instance = {
+  let _LocalInfo = null;
+  let _L10NInfo = null;
+
+  return {
     init: (params, cb) => {
       const { isDev = false } = params;
-      const url = isDev
+      const localInfoUrl = isDev
         ? 'https://ocean.waimai.test.sankuai.com/api/openapi/v1/currentLocalInfo'
         : 'https://i18n.mykeeta.com/api/openapi/v1/currentLocalInfo';
 
@@ -36,7 +27,7 @@ function createInstance(): IInstance {
       }
 
       axios.post(
-        url,
+        localInfoUrl,
         stringify(params),
         {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
@@ -44,15 +35,19 @@ function createInstance(): IInstance {
       )
       .then(function (response) {
         if (response?.data?.code === 0) {
-          const {config} = response?.data?.data || {};
+          const { config } = response?.data?.data || {};
+          _LocalInfo = response?.data?.data || null;
 
           Horn.init({}, { isDev });
-          Horn.fetch(config.commonConfig.hornConfigKey).then((result) => {
+          Horn.fetch(config?.commonConfig?.hornConfigKey).then((result) => {
+            _L10NInfo = result;
             cb && cb(result);
             window.localStorage.setItem('L10N_STORE', JSON.stringify(result));
           }).catch((error) => {
             // 当有缓存时，返回缓存
             if (L10N_STORE) {
+              _L10NInfo = L10N_STORE;
+
               cb && cb(L10N_STORE, {
                 message: 'RESULT_FROM_STORAGE',
                 error
@@ -70,6 +65,8 @@ function createInstance(): IInstance {
       .catch(function (error) {
         // 当有缓存时，返回缓存
         if (L10N_STORE) {
+          _LocalInfo = L10N_STORE;
+
           cb && cb(L10N_STORE, {
             message: 'RESULT_FROM_STORAGE',
             error
@@ -82,10 +79,12 @@ function createInstance(): IInstance {
         }
         error && console.error('ERROR_FROM_LOCALINFO', error);
       });
-    }
-  };
+    },
 
-  return instance;
+    exportLocalInfo: () => _LocalInfo,
+
+    exportL10nInfo: () => _L10NInfo
+  };
 }
 
 const l10nClient = createInstance();
